@@ -1,0 +1,62 @@
+
+uart.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+30008000 <_start>:
+30008000:	e59f0088 	ldr	r0, [pc, #136]	; 30008090 <halt+0x4>
+30008004:	e5901000 	ldr	r1, [r0]
+30008008:	e3c110ff 	bic	r1, r1, #255	; 0xff
+3000800c:	e3811022 	orr	r1, r1, #34	; 0x22
+30008010:	e5801000 	str	r1, [r0]
+30008014:	e59f0078 	ldr	r0, [pc, #120]	; 30008094 <halt+0x8>
+30008018:	e3a01003 	mov	r1, #3
+3000801c:	e5801000 	str	r1, [r0]
+30008020:	e3a01005 	mov	r1, #5
+30008024:	e5801004 	str	r1, [r0, #4]
+30008028:	e3a01001 	mov	r1, #1
+3000802c:	e5801008 	str	r1, [r0, #8]
+30008030:	e3a01000 	mov	r1, #0
+30008034:	e580100c 	str	r1, [r0, #12]
+30008038:	e3a01022 	mov	r1, #34	; 0x22
+3000803c:	e5801028 	str	r1, [r0, #40]	; 0x28
+30008040:	e59f1050 	ldr	r1, [pc, #80]	; 30008098 <halt+0xc>
+30008044:	e580102c 	str	r1, [r0, #44]	; 0x2c
+30008048:	e59f004c 	ldr	r0, [pc, #76]	; 3000809c <halt+0x10>
+3000804c:	e3a0100a 	mov	r1, #10
+30008050:	e5801000 	str	r1, [r0]
+30008054:	e3a0100d 	mov	r1, #13
+30008058:	e5801000 	str	r1, [r0]
+3000805c:	e3a01055 	mov	r1, #85	; 0x55
+30008060:	e5801000 	str	r1, [r0]
+30008064:	e3a01061 	mov	r1, #97	; 0x61
+30008068:	e5801000 	str	r1, [r0]
+3000806c:	e3a01072 	mov	r1, #114	; 0x72
+30008070:	e5801000 	str	r1, [r0]
+30008074:	e3a01074 	mov	r1, #116	; 0x74
+30008078:	e5801000 	str	r1, [r0]
+3000807c:	e3a0100a 	mov	r1, #10
+30008080:	e5801000 	str	r1, [r0]
+30008084:	e3a0100d 	mov	r1, #13
+30008088:	e5801000 	str	r1, [r0]
+
+3000808c <halt>:
+3000808c:	eafffffe 	b	3000808c <halt>
+30008090:	e0200020 	eor	r0, r0, r0, lsr #32
+30008094:	e2900800 	adds	r0, r0, #0, 16
+30008098:	0000dddd 	ldrdeq	sp, [r0], -sp	; <UNPREDICTABLE>
+3000809c:	e2900820 	adds	r0, r0, #32, 16	; 0x200000
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00001e41 	andeq	r1, r0, r1, asr #28
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000014 	andeq	r0, r0, r4, lsl r0
+  10:	412d3705 			; <UNDEFINED> instruction: 0x412d3705
+  14:	070a0600 	streq	r0, [sl, -r0, lsl #12]
+  18:	09010841 	stmdbeq	r1, {r0, r6, fp}
+  1c:	Address 0x000000000000001c is out of bounds.
+
